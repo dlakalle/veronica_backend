@@ -18,7 +18,8 @@ urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^api-token-refresh/', refresh_jwt_token),
-    url(r'^admin/', admin.site.urls),
-    url(r'^', admin.site.urls),
+    url(r'^bot/', views.BotView.as_view(), name="bot"),
+    # url(r'^admin/', admin.site.urls),
+    # url(r'^', admin.site.urls),
     # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
